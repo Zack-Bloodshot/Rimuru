@@ -17,7 +17,7 @@ async def pmperm(slime):
   name = mention(user.first_name, user.id)
   if not slime.media:
     await rafael.send_message(pm_log, f"{name}: {slime.message.text}", parse_mode='md')
-  if pm.is_approved(user.id):
+  if pm.is_approved(user.id) == False:
     return 
   if user.id in now:
     count = now[user.id] 
