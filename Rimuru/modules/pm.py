@@ -29,7 +29,7 @@ async def pmperm(slime):
       now[user.id] = count + 1
   else:
     now[user.id] = 0 
-    await rimuru.send_file(file="CAACAgUAAxkBAAFEmXxg2wLMk1JJ4D3hDPANaCzUR5V6mQACWgIAAo-r2FTHhGRff7EgdSAE")
+    await rimuru.send_file(slime.chat_id, file="CAACAgUAAxkBAAFEmXxg2wLMk1JJ4D3hDPANaCzUR5V6mQACWgIAAo-r2FTHhGRff7EgdSAE")
     await slime.reply("Yo! Please wait till Abhi come's and approves you...")
 
 
