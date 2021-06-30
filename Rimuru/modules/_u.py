@@ -1,5 +1,5 @@
 from Rimuru import rimuru, rafael, mention
-from telethon import events, Buttons
+from telethon import events, Button
 import time
 
 @rimuru.on(events.NewMessage(outgoing=True, pattern=r'^#(alive)'))
