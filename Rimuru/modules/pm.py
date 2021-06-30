@@ -47,7 +47,8 @@ async def approve(slime):
   if not slime.is_private:
     return 
   await slime.edit("✿Approving...")
-  h = pm.approve(slime.sender_id)
+  user = await slime.get_chat()
+  h = pm.approve(user.id)
   if h == False:
     await slime.edit("⍟Already aprovved..")
     time.sleep(1)
@@ -62,7 +63,8 @@ async def approve(slime):
   if not slime.is_private:
     return 
   await slime.edit("✿Disapproving...")
-  h = pm.disapprove(slime.sender_id)
+  user = await slime.get_chat()
+  h = pm.disapprove(user.id)
   if h == False:
     await slime.edit("⍟Already disaprovved..")
     time.sleep(1)
