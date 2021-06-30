@@ -13,14 +13,10 @@ Users.__table__.create(checkfirst=True)
 INSERTION_LOCK = threading.RLock() 
 
 def is_approved(userid):
-  try:
-    user = SESSION.query(Users).get(userid)
-    if user:
-      return True
-    else:
-      return False
-  finally:
-    SESSION.close()
+    try:
+        return SESSION.query(Users).get(userid)
+    finally:
+        SESSION.close()
   
 def approve(userid):
   with INSERTION_LOCK:
