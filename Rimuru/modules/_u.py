@@ -8,7 +8,7 @@ async def alive(slime):
   date = dt.now()
   date = date.strftime("%B %d, %Y")
   kek = mention(me.first_name, me.id)
-  await slime.edit(f"「 **Great Sage On!**\n**Connection**: `Establishment Successful`\nClients: Rimuru [On], Rafael [On]\nDate: `{date}`\n[­](https://telegra.ph/file/a69c61eb7f8feeb35cbdb.jpg)\nMaster: {kek} 」")
+  await slime.edit(f"「 **Great Sage On!**\n**Connection**: `Establishment Successful`\nClients: Rimuru-On, Rafael-On\nDate: `{date}`\n [­ ](https://telegra.ph/file/a69c61eb7f8feeb35cbdb.jpg)\nMaster: {kek} 」", disable_web_page_preview=False)
   
 @rimuru.on(events.NewMessage(outgoing=True, pattern=r'^#ping'))
 async def ping(slime):
