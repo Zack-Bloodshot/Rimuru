@@ -1,1 +1,1 @@
-from Rimuru.modules import (_u, pm, scraper, taglog, utils)
+from Rimuru.modules import (_u, pm, scraper, tag_log, utils)
