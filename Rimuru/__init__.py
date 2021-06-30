@@ -15,4 +15,4 @@ def mention(name, userid):
 
 
 rimuru = TelegramClient(StringSession(string_one), api_id, api_hash)
-rafael = TelegramClient(api_id, api_hash).start(bot_token=bot_token)
+rafael = TelegramClient('bot', api_id, api_hash).start(bot_token=bot_token)
