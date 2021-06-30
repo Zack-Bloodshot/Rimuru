@@ -16,7 +16,7 @@ async def movscrape(slime):
         count += 1  
   if not count == 0:
     if slime.reply_to_msg_id:
-      slime = await slime.get_reply()
+      slime = await slime.get_reply_message()
     else:
       pass 
     await slime.reply("👆")
