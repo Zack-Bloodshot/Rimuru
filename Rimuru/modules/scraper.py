@@ -10,8 +10,8 @@ async def movscrape(slime):
   for chat in chats:
     if not count == 0:
       break
-    async for msg in rimuru.iter_messages(chat, search=args):
-      if msg.media:
+    async for msg in rimuru.iter_messages(chat, reverse=True, search=args):
+      if msg.video or msg.document:
         await rimuru.send_file(slime.chat.id, msg.media, caption=msg.text)
         count += 1  
   if not count == 0:
