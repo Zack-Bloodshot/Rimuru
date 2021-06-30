@@ -14,6 +14,10 @@ async def taglog(slime):
     link = f"https://t.me/c/{chat.id}/{msg.id}"
     text = f"**{kek}** in **{chat.title}**\n\n`{msg.text}`"
     await rafael.send_message(tag_log, text, buttons= [Button.url(text="Message", url = link)])
+  elif msg.media:
+    link = f"https://t.me/c/{chat.id}/{msg.id}"
+    text = f"**{kek}** in **{chat.title}**\n\n`{msg.text}`"
+    await rafael.send_file(tag_log, file = msg.media, caption=text, buttons= [Button.url(text="Message", url = link)])
   else:
-    return
+    pass
   
