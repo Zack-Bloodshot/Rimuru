@@ -19,7 +19,7 @@ async def pmperm(slime):
     await rafael.send_message(pm_log, f"**{name}**: {slime.message.text}", parse_mode='md')
   else:
     await rafael.send_file(pm_log, file=slime.media, caption=f"{name}: {slime.message.text}")
-  if pm.is_approved(user.id) == True:
+  if pm.is_approved(user.id):
     return 
   if user.id in now:
     count = now[user.id] 
