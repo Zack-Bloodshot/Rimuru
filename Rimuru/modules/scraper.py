@@ -12,7 +12,7 @@ async def movscrape(slime):
       break
     async for msg in rimuru.iter_messages(chat, query=args):
       if msg.media:
-        await rimuru.send_file(slime.chat.id, msg.media, caption=msg.caption)
+        await rimuru.send_file(slime.chat.id, msg.media, caption=msg.text)
         count += 1  
   if not count == 0:
     if slime.reply_to_msg_id:
@@ -29,5 +29,5 @@ async def aniscrape(slime):
   count = 0
   async for msg in rimuru.iter_messages(-1001231649146, search=args):
     if msg.media:
-      await rimuru.send_file(slime.chat_id, file=msg.media, caption=msg.caption)
+      await rimuru.send_file(slime.chat_id, file=msg.media, caption=msg.text)
       count += 1
