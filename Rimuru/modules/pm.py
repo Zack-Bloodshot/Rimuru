@@ -14,7 +14,7 @@ async def pmperm(slime):
   user = await slime.get_chat()
   if user.bot:
     return
-  name = mention(user.first_name, user.id)
+  name = f"[{user.first_name}]({user.id})"
   if not slime.media:
     await rafael.send_message(pm_log, f"{name}: {slime.message.text}", parse_mode='md')
   if pm.is_approved(user.id) == False:
@@ -23,17 +23,20 @@ async def pmperm(slime):
     count = now[user.id] 
     if count == 5:
       await rimuru.send_file(slime.chat_id,file="CAADBQADUgMAAp6ZWVadu3NWvPQb8gI")
+      time.sleep(2)
       await slime.reply("Stop now, or i will block you...")
       now[user.id] = count + 1
     elif count == 6:
       await rimuru(functions.contacts.BlockRequest(id=user.id))
       await rimuru.send_message(slime.chat_id, "Agh, You wont lose your virginity here...")
+      time.sleep(2)
       await rimuru.send_message(slime.chat_id, "Wait till Abhi comes..")
     else:
       now[user.id] = count + 1
   else:
     now[user.id] = 1
     await rimuru.send_file(slime.chat_id, file="CAADBQADWgIAAo-r2FTHhGRff7EgdQI")
+    time.sleep
     await slime.reply("Yo! Please wait till Abhi come's and approves you...")
 
 
