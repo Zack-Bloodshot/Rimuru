@@ -22,6 +22,7 @@ async def purge(slime):
         break 
     try:
       await msg.delete()
+      count += 1
     except Exception:
       pass
   if not count == 0:
