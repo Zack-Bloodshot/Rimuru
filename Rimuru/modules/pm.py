@@ -13,7 +13,7 @@ async def pmperm(slime):
   user = await slime.get_chat()
   name = f"[{user.first_name}]({user.id})"
   if not slime.media:
-    await rafael.send_message(pm_log, f"*{name}*: {slime.message.text}", parse_mode='md')
+    await rafael.send_message(pm_log, f"**{name}**: {slime.message.text}", parse_mode='md')
   if pm.is_approved(user.id):
     return 
   if user.id in now:
@@ -29,7 +29,7 @@ async def pmperm(slime):
       now[user.id] = count + 1
   else:
     now[user.id] = 0 
-    await rimuru.send_file(slime.chat_id, file="CAACAgUAAxkBAAFEmXxg2wLMk1JJ4D3hDPANaCzUR5V6mQACWgIAAo-r2FTHhGRff7EgdSAE")
+    await rimuru.send_file(slime.chat_id, file="CAADBQADWgIAAo-r2FTHhGRff7EgdQI")
     await slime.reply("Yo! Please wait till Abhi come's and approves you...")
 
 
