@@ -10,10 +10,10 @@ now = {}
 async def pmperm(slime):
   if not slime.is_private:
     return
-  user = slime.sender
-  name = f"{user.first_name} {user.last_name}"
+  user = slime.chat
+  name = f"{user.title}"
   men = mention(name, user.id)
-  await rafael.send_message(pm_log, f"*{men}*: {slime.message.text}")
+  await rafael.send_message(pm_log, f"*{men}*: {slime.message.text}", parse_mode='md')
   if pm.is_approved(user.id):
     return 
   if user.id in now:
