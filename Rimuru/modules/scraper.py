@@ -1,4 +1,4 @@
-from telethon import events, Buttons 
+from telethon import events, Button
 from Rimuru import rimuru
 
 
