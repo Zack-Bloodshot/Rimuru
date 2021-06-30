@@ -12,7 +12,7 @@ async def taglog(slime):
   msg = slime.message
   if msg.text:
     link = f"https://t.me/c/{chat.id}/{msg.id}"
-    text = f"{kek} in **{chat.title}**\n\n`{msg.text}`"
+    text = f"**{kek}** in **{chat.title}**\n\n`{msg.text}`"
     await rafael.send_message(tag_log, text, buttons= [Button.url(text="Message", url = link)])
   else:
     return
