@@ -11,8 +11,7 @@ async def pmperm(slime):
   if not slime.is_private:
     return
   user = await slime.get_chat()
-  name = f"{user.title}"
-  men = mention(name, user.id)
+  name = f"[{user.first_name}]({user.id})"
   await rafael.send_message(pm_log, f"*{men}*: {slime.message.text}", parse_mode='md')
   if pm.is_approved(user.id):
     return 
