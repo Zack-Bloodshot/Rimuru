@@ -4,7 +4,7 @@ from Rimuru.modules.sql import pm_sql as pm
 import time
 
 now = {}
-
+rafael.parse_mode='html'
 
 @rimuru.on(events.NewMessage(incoming=True))
 async def pmperm(slime):
