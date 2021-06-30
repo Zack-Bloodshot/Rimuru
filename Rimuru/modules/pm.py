@@ -19,17 +19,18 @@ async def pmperm(slime):
     return 
   if user.id in now:
     count = now[user.id] 
-    if count == 10:
-      await rimuru.send_file(slime.chat_id,file="CAADBQADmwIAAjYOMFfXvrzk6UlajwI")
+    if count == 5:
+      await rimuru.send_file(slime.chat_id,file="CAADBQADUgMAAp6ZWVadu3NWvPQb8gI")
       await slime.reply("Stop now, or i will block you...")
-    elif count == 11:
+      now[user.id] = count + 1
+    elif count == 6:
       await rimuru(functions.contacts.BlockRequest(id=user.id))
       await rimuru.send_message(slime.chat_id, "Agh, You wont lose your virginity here...")
       await rimuru.send_message(slime.chat_id, "Wait till Abhi comes..")
     else:
       now[user.id] = count + 1
   else:
-    now[user.id] = 0 
+    now[user.id] = 1
     await rimuru.send_file(slime.chat_id, file="CAADBQADWgIAAo-r2FTHhGRff7EgdQI")
     await slime.reply("Yo! Please wait till Abhi come's and approves you...")
 
