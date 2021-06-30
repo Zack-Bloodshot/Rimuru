@@ -5,8 +5,10 @@ from datetime import datetime as dt
 @rimuru.on(events.NewMessage(outgoing=True, pattern=r'^#(alive)'))
 async def alive(slime):
   me = await rimuru.get_me()
+  date = dt.now()
+  date = date.strftime("%B %d, %Y")
   kek = mention(me.first_name, me.id)
-  await slime.edit(f"「Yos, Great Sage on!」\nMaster: {kek}")
+  await slime.edit(f"「 **Great Sage On!**\n**Connection**: `Establishment Successful`\nClients: Rimuru [On], Rafael [On]\nDate: `{date}`\n[­](https://telegra.ph/file/a69c61eb7f8feeb35cbdb.jpg)\nMaster: {kek} 」")
   
 @rimuru.on(events.NewMessage(outgoing=True, pattern=r'^#ping'))
 async def ping(slime):
