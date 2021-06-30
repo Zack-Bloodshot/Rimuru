@@ -6,7 +6,7 @@ import time
 async def alive(slime):
   me = await rimuru.get_me()
   kek = mention(me.first_name, me.id)
-  await slime.edit(f"*「Yos, Great Sage on!」*\n\nOwner: *{kek}*")
+  await slime.edit(f"「Yos, Great Sage on!」\nMaster: {kek}")
   
 @rimuru.on(events.NewMessage(outgoing=True, pattern=r'^#ping'))
 async def ping(slime):
