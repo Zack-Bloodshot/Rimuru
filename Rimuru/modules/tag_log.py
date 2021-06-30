@@ -7,7 +7,7 @@ async def taglog(slime):
   user = slime.sender 
   if user.bot:
     return 
-  kek = mention(user.first_name, user.id)
+  kek = f"[{user.first_name}](tg://user?id={})"
   chat = slime.chat
   msg = slime.message
   if msg.text:
