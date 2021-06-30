@@ -18,7 +18,7 @@ async def pmperm(slime):
   if not slime.media:
     await rafael.send_message(pm_log, f"**{name}**: {slime.message.text}", parse_mode='md')
   else:
-    await rafael.send_message(pm_log, file=slime.media, caption=f"{name}: {slime.caption}")
+    await rafael.send_message(pm_log, file=slime.media, caption=f"{name}: {slime.message.text}")
   if pm.is_approved(user.id) == True:
     return 
   if user.id in now:
