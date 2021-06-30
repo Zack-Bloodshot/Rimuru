@@ -1,5 +1,5 @@
 from Rimuru import rimuru, rafael, pm_log, tag_log, mention
-from telethon import events, Buttons, functions, types
+from telethon import events, Button, functions, types
 from Rimuru.modules.sql import pm_sql as pm
 import time
 
