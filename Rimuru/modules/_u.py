@@ -1,6 +1,6 @@
 from Rimuru import rimuru, rafael, mention
 from telethon import events, Button
-import time
+from datetime import datetime as dt
 
 @rimuru.on(events.NewMessage(outgoing=True, pattern=r'^#(alive)'))
 async def alive(slime):
@@ -10,10 +10,10 @@ async def alive(slime):
   
 @rimuru.on(events.NewMessage(outgoing=True, pattern=r'^#ping'))
 async def ping(slime):
-  start = time.time()
+  start = dt.now()
   await slime.edit("`۞pinging....`")
-  end = time.time()
-  pon = (start - end).microseconds / 100
+  end = dt.now()
+  pon = (start - end).microseconds / 1000
   await slime.edit(f"ᑭOᑎᘜ!!\n\npong time: {pon}ms")
 
 @rafael.on(events.NewMessage(outgoing=True,pattern=r'^/start'))
