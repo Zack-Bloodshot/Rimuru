@@ -10,7 +10,6 @@ class Users(BASE):
     self.userid = userid
  
 Users.__table__.create(checkfirst=True)
-LOCK = threading.Rlock()
 
 def is_approved(userid):
   try:
