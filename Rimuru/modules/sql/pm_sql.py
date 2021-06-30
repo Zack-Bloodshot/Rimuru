@@ -28,7 +28,7 @@ def approve(userid):
     return False
   else:
     user = Users(userid)
-    SESSION.add()
+    SESSION.add(user)
     SESSION.commit()
     return True
   
