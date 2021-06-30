@@ -14,7 +14,11 @@ INSERTION_LOCK = threading.RLock()
 
 def is_approved(userid):
     try:
-        return SESSION.query(Users).get(userid)
+      user = SESSION.query(Users).get(userid)
+      if user:
+        return True 
+      else:
+        return False
     finally:
         SESSION.close()
   
