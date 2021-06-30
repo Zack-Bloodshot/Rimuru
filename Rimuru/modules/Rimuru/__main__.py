@@ -1,4 +1,4 @@
-from Rimuru import rimuru 
+from Rimuru import rimuru, rafael
 import logging  
 import Rimuru.modules 
 
@@ -8,5 +8,6 @@ logger = logging.getLogger("__name__")
 
 print("Starting....")
 rimuru.parse_mode = 'md'
+rafel.parse_mode = 'md'
 rimuru.start()
 rimuru.run_until_disconnected()
