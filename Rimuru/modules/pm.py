@@ -37,28 +37,28 @@ async def pmperm(slime):
 def approve(slime):
   if not slime.is_private:
     return 
-  slime.edit("✿Approving...")
+  await slime.edit("✿Approving...")
   h = pm.approve(slime.sender_id)
   if h == False:
-    slime.edit("⍟Already aprovved..")
+    await slime.edit("⍟Already aprovved..")
     time.sleep(1)
-    slime.delete()
+    await slime.delete()
     return
-  slime.edit("✧Successful!")
+  await slime.edit("✧Successful!")
   time.sleep(1)
-  slime.delete()
+  await slime.delete()
 
 @rimuru.on(events.NewMessage(outgoing=True, pattern=r"^#(d|disapprove)"))    
 def approve(slime):
   if not slime.is_private:
     return 
-  slime.edit("✿Disapproving...")
+  await slime.edit("✿Disapproving...")
   h = pm.disapprove(slime.sender_id)
   if h == False:
-    slime.edit("⍟Already disaprovved..")
+    await slime.edit("⍟Already disaprovved..")
     time.sleep(1)
-    slime.delete()
+    await slime.delete()
     return
-  slime.edit("✧Successful!")
+  await slime.edit("✧Successful!")
   time.sleep(1)
-  slime.delete()
+  await slime.delete()
