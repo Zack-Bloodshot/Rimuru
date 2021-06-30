@@ -15,3 +15,8 @@ async def ping(slime):
   end = time.time()
   pon = (start - end).microseconds / 100
   slime.edit(f"ᑭOᑎᘜ!!\n\npong time: {pon}ms")
+
+@rafael.on(events.NewMessage(outgoing=True,pattern=r'^/start'))
+async def start(slime):
+  slime.reply("Im up!")
+  
