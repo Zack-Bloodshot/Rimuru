@@ -28,7 +28,7 @@ async def purge(slime):
   if not count == 0:
     await slime.respond(f"Purged {count} messages..")
     
-@rimuru.on(event.NewMessage(outgoing=True, pattern=r'^#id'))    
+@rimuru.on(events.NewMessage(outgoing=True, pattern=r'^#id'))    
 async def idscrape(slime):
     if slime.reply_to_msg_id:
         await slime.get_input_chat()
