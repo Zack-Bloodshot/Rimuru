@@ -19,7 +19,7 @@ async def movscrape(slime):
       slime = await slime.get_reply()
     else:
       pass 
-    slime.reply("👆")
+    await slime.reply("👆")
     
     
 
