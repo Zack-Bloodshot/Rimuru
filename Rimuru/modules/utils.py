@@ -1,5 +1,6 @@
 from Rimuru import rimuru 
 from telethon import events, Button
+from telethon.utils import pack_bot_file_id
 import time 
 
 @rimuru.on(events.NewMessage(outgoing=True,pattern=r'^#purge(.*)'))
