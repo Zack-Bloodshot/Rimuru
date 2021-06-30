@@ -11,7 +11,7 @@ async def movscrape(slime):
     if not count == 0:
       break
     async for msg in rimuru.iter_messages(chat, query=args):
-      if msg.media
+      if msg.media:
         await rimuru.send_file(slime.chat.id, msg.media, caption=msg.caption)
         count += 1  
   if not count == 0:
