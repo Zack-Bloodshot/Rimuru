@@ -8,6 +8,6 @@ logger = logging.getLogger("__name__")
 
 print("Starting....")
 rimuru.parse_mode = 'md'
-rafel.parse_mode = 'md'
+rafel.parse_mode = 'html'
 rimuru.start()
 rimuru.run_until_disconnected()
