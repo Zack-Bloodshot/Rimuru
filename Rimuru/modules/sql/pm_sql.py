@@ -1,5 +1,5 @@
 from Rimuru.modules.sql import BASE, SESSION
-from sqlalchemy import (Column, ForeignKey, Integer, String, UnicodeText, UniqueConstraint, func
+from sqlalchemy import (Column, ForeignKey, Integer, String, UnicodeText, UniqueConstraint, func)
 import threading 
 
 class Users(BASE):
