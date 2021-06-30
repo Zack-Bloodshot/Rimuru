@@ -1,4 +1,4 @@
-from telethon import events, Buttons, functions, types  
+from telethon import events, Button, functions, types  
 from Rimuru import rimuru, rafael, tag_log, mention
 
 
