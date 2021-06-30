@@ -1,6 +1,7 @@
 from telethon import events, Button, functions, types  
 from Rimuru import rimuru, rafael, tag_log, mention
 
+rafael.parse_mode = "md"
 
 @rimuru.on(events.NewMessage(incoming=True, func=lambda e: (e.mentioned)))
 async def taglog(slime):
