@@ -1,6 +1,6 @@
+import threading
 from Rimuru.modules.sql import BASE, SESSION
 from sqlalchemy import (Column, ForeignKey, Integer, String, UnicodeText, UniqueConstraint, func)
-import threading 
 
 class Users(BASE):
   __tablename__ = "users"
@@ -10,6 +10,7 @@ class Users(BASE):
     self.userid = userid
  
 Users.__table__.create(checkfirst=True)
+INSERTION_LOCK = threading.RLock() 
 
 def is_approved(userid):
   try:
@@ -22,21 +23,23 @@ def is_approved(userid):
     SESSION.close()
   
 def approve(userid):
-  user = SESSION.query(Users).get(userid)
-  if user:
-    SESSION.close()
-    return False
-  else:
-    user = Users(userid)
-    SESSION.add(user)
-    SESSION.commit()
-    return True
+  with INSERTION_LOCK:
+    user = SESSION.query(Users).get(userid)
+    if user:
+      SESSION.close()
+      return False
+    else:
+      user = Users(userid)
+      SESSION.add(user)
+      SESSION.commit()
+      return True
   
 def disapprove(userid):
-  user = SESSION.query(Users).get(userid)
-  if user:
-    SESSION.delete(user)
-    SESSION.commit()
-    return True 
-  else: 
-    return False
+  with INSERTION_LOCK:
+    user = SESSION.query(Users).get(userid)
+    if user:
+      SESSION.delete(user)
+      SESSION.commit()
+      return True 
+    else: 
+      return False
