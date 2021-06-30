@@ -6,17 +6,17 @@ import time
 async def alive(slime):
   me = await rimuru.get_me()
   kek = mention(me.first_name, me.id)
-  slime.edit(f"*「Yos, Great Sage on!」*\n\nOwner: *{kek}*")
+  await slime.edit(f"*「Yos, Great Sage on!」*\n\nOwner: *{kek}*")
   
 @rimuru.on(events.NewMessage(outgoing=True, pattern=r'^#ping'))
 async def ping(slime):
   start = time.time()
-  slime.edit("`۞pinging....`")
+  await slime.edit("`۞pinging....`")
   end = time.time()
   pon = (start - end).microseconds / 100
-  slime.edit(f"ᑭOᑎᘜ!!\n\npong time: {pon}ms")
+  await slime.edit(f"ᑭOᑎᘜ!!\n\npong time: {pon}ms")
 
 @rafael.on(events.NewMessage(outgoing=True,pattern=r'^/start'))
 async def start(slime):
-  slime.reply("Im up!")
+  await slime.reply("Im up!")
   
