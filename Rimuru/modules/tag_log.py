@@ -5,7 +5,7 @@ from Rimuru import rimuru, rafael, tag_log, mention
 @rimuru.on(events.NewMessage(incoming=True, func=lambda e: (e.mentioned)))
 async def taglog(slime):
   user = slime.sender 
-  if user.is_bot:
+  if user.bot:
     return 
   kek = mention(user.first_name, user.id)
   chat = slime.chat
