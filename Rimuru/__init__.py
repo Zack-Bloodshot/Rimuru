@@ -11,7 +11,7 @@ tag_log = int(os.environ.get('TAG_LOG'))
 db_uri = os.environ.get('DATABASE_URL')
 
 def mention(name, userid):
-  return f"[{name}]({userid})"
+  return f"[{name}](tg://user?id={userid})"
 
 
 rimuru = TelegramClient(StringSession(string_one), api_id, api_hash)
