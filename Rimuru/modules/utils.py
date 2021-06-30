@@ -36,12 +36,12 @@ async def idscrape(slime):
         r_msg = await slime.get_reply_message()
         if r_msg.media:
             bot_api_file_id = pack_bot_file_id(r_msg.media)
-            await slime.edit("**Current Chat ID:**  `{}`\n**From User ID:**  `{}`\n**Bot API File ID:**  `{}`".format(str(event.chat_id),str(r_msg.sender_id),bot_api_file_id))
+            await slime.edit("**Current Chat ID:**  `{}`\n**From User ID:**  `{}`\n**Bot API File ID:**  `{}`".format(str(slime.chat_id),str(r_msg.sender_id),bot_api_file_id))
         else:
-            await slime.edit("**Chat ID:**  `{}`\n**User ID:**  `{}`".format(str(event.chat_id),str(r_msg.sender_id)))
+            await slime.edit("**Chat ID:**  `{}`\n**User ID:**  `{}`".format(str(slime.chat_id),str(r_msg.sender_id)))
     elif event.pattern_match.group(1):
         ids = await get_user_id(event.pattern_match.group(1))
-        await slime.edit("**Chat ID:**  `{}`\n**User ID:**  `{}`".format(str(event.chat_id),str(ids)))
+        await slime.edit("**Chat ID:**  `{}`\n**User ID:**  `{}`".format(str(slime.chat_id),str(ids)))
     else:
-        await slime.edit("**Current Chat ID:**  `{}`".format(str(event.chat_id)))
+        await slime.edit("**Current Chat ID:**  `{}`".format(str(slime.chat_id)))
     
