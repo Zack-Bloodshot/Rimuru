@@ -2,7 +2,7 @@ from Rimuru import rimuru
 from telethon import events, Button
 import time 
 
-@rimuru.on(events.NewMessage(outgoing=True,pattern=r'#^purge(.*)'))
+@rimuru.on(events.NewMessage(outgoing=True,pattern=r'^#purge(.*)'))
 async def purge(slime):
   msg = slime.message.split(" ", 3)
   reply = await slime.get_reply()
