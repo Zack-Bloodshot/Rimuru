@@ -20,7 +20,7 @@ async def pmperm(slime):
   if user.id in now:
     count = now[user.id] 
     if count == 10:
-      await slime.rimuru.send_file(file="CAADBQADmwIAAjYOMFfXvrzk6UlajwI")
+      await rimuru.send_file(file="CAADBQADmwIAAjYOMFfXvrzk6UlajwI")
       await slime.reply("Stop now, or i will block you...")
     elif count == 11:
       await rimuru(functions.contacts.BlockRequest(id=user.id))
