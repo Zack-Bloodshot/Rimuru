@@ -5,7 +5,7 @@ import time
 @rimuru.on(events.NewMessage(outgoing=True,pattern=r'^#purge(.*)'))
 async def purge(slime):
   msg = slime.message.text.split(" ", 3)
-  reply = await slime.get_reply()
+  reply = await slime.get_reply_message()
   if not reply:
     slime.edit("Reply...")
     time.sleep(1)
