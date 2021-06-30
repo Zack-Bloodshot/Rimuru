@@ -16,7 +16,7 @@ async def purge(slime):
   except IndexError:
     to_msg = False 
   count = 0
-  async for msg in rimuru.iter_messages(slime.chat_id, offset_id=from_msg):
+  async for msg in rimuru.iter_messages(slime.chat_id, reverse=True, offset_id=from_msg):
     if not to_msg == False:
       if count == int(to_msg):
         break 
