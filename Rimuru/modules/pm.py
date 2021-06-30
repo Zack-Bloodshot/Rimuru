@@ -4,7 +4,7 @@ from Rimuru.modules.sql import pm_sql as pm
 import time
 
 now = {}
-rafael.parse_mode='html'
+rafael.parse_mode='md'
 
 @rimuru.on(events.NewMessage(incoming=True))
 async def pmperm(slime):
@@ -16,9 +16,9 @@ async def pmperm(slime):
     return
   name = mention(user.first_name, user.id)
   if not slime.media:
-    await rafael.send_message(pm_log, f"**{name}**: {slime.message.text}")
+    await rafael.send_message(pm_log, f"**{user.first_name}**: {slime.message.text}")
   else:
-    await rafael.send_file(pm_log, file=slime.media, caption=f"{name}: {slime.message.text}")
+    await rafael.send_file(pm_log, file=slime.media, caption=f"{user.first_name}: {slime.message.text}")
   if pm.is_approved(user.id):
     return 
   if user.id in now:
