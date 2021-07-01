@@ -9,8 +9,9 @@ async def songs(slime):
   await slime.delete()
   yt = YouTube(args)
   ytu = yt.streams.get_audio_only()
-  file_name = f"{yt.title}.mp3" 
   dl = ytu.download()
+  path, ext = os.path.splitext(dl)
+  file_name = path + ".mp3"
   dl = os.rename(dl, file_name)
   await rimuru.send_file(slime.chat_id, file=open(file_name))
-  os.remove(dl)
+  os.remove(file_name)
