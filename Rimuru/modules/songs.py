@@ -12,5 +12,5 @@ async def songs(slime):
   file_name = f"{yt.title}.mp3" 
   dl = ytu.download()
   dl = os.rename(dl, file_name)
-  await rimuru.send_file(slime.chat_id, file=dl)
+  await rimuru.send_file(slime.chat_id, file=open(file_name))
   os.remove(dl)
