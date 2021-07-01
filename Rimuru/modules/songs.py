@@ -8,7 +8,7 @@ async def songs(slime):
   args = slime.message.text[2:]
   await slime.delete()
   yt = YouTube(args)
-  yt = yt.streams.get_only_audio(mp3)
+  yt = yt.streams.get_audio_only(mp3)
   dl = yt.download()
   await rimuru.send_file(slime.chat_id, file=dl)
   os.remove(dl)
