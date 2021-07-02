@@ -14,19 +14,9 @@ async def songs(slime):
     "outtmpl": "%(title)s.%(ext)s",
     "logger": LOGS,
     "writethumbnail": True,
-    "prefer_ffmpeg": True,
     "format": "bestaudio/best",
     "geo_bypass": True,
     "nocheckcertificate": True,
-    "postprocessors": [
-      {
-        "key": "FFmpegExtractAudio",
-        "preferredcodec": "mp3",
-        "preferredquality": "320 kbps",
-      },
-      {"key": "EmbedThumbnail"},  # ERROR: Conversion failed!
-      {"key": "FFmpegMetadata"},
-    ],
     "quiet": True,
   }
   args = slime.message.text[2:]
