@@ -6,4 +6,4 @@ youtube_search
 youtube_dl
 hachoir
 ffmpeg 
-ffprove
+ffmprobe
