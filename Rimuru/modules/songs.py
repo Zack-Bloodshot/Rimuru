@@ -35,7 +35,7 @@ async def songs(slime):
   f = open(dl, 'rb')
   media = types.InputMediaDocument(
     file=f,
-    attribute=DocumentAttributeAudio,
+    attribute=types.DocumentAttributeAudio,
     )
   async with rimuru.action(slime.chat_id, 'audio'):
     await rimuru.send_message(slime.chat_id, file=media, force_document=False)
