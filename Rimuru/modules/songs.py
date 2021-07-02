@@ -5,7 +5,7 @@ import logging
 import os
 import ffmpeg 
 from youtube_search import YoutubeSearch
-from telethon.tl import DocumentAttributeAudio
+from telethon.types import DocumentAttributeAudio
 
 LOGS = logging.getLogger(__name__)
 
