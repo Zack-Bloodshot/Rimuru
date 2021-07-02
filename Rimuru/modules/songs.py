@@ -1,11 +1,10 @@
-from telethon import events, Button 
+from telethon import events, Button, types
 from Rimuru import rimuru 
 import youtube_dl
 import logging
 import os
 import ffmpeg 
 from youtube_search import YoutubeSearch
-from telethon.types import DocumentAttributeAudio
 
 LOGS = logging.getLogger(__name__)
 
@@ -34,7 +33,11 @@ async def songs(slime):
     ydl.download([url])
   m = await slime.respond("Downloaded, Now uploading....")
   f = open(dl, 'rb')
+  media = types.InputMediaDocument(
+    file=f,
+    attribute=DocumentAttributeAudio,
+    )
   async with rimuru.action(slime.chat_id, 'audio'):
-    await rimuru.send_message(slime.chat_id, file=f, attribute=DocumentAttributeAudio, force_document=False)
+    await rimuru.send_message(slime.chat_id, file=media, force_document=False)
   await m.delete()
   os.remove(dl)
