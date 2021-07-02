@@ -21,7 +21,7 @@ async def songs(slime):
       {
         "key": "FFmpegExtractAudio",
         "preferredcodec": "mp3",
-        "preferredquality": uid,
+        "preferredquality": "320 kbps",
       },
       {"key": "EmbedThumbnail"},  # ERROR: Conversion failed!
       {"key": "FFmpegMetadata"},
