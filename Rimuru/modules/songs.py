@@ -35,7 +35,7 @@ async def songs(slime):
     result = YoutubeSearch(args,max_results=1).to_dict()
     url = "https://youtu.be/" + result[0]['id']
   await slime.delete()
-  with youtube_dl.YouTubeDL(opts) as ydl:
+  with youtube_dl.YoutubeDL(opts) as ydl:
     dl = ydl.download(url)
   m = await slime.respond("Downloaded, Now uploading....")
   async with rimuru.action(slime.chat_id, 'audio'):
