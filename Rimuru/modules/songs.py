@@ -4,7 +4,6 @@ import youtube_dl
 import logging
 import os
 import ffmpeg 
-from ffprobe import FFProbe
 from youtube_search import YoutubeSearch
 
 LOGS = logging.getLogger(__name__)
