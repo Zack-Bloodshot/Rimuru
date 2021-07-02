@@ -34,6 +34,6 @@ async def songs(slime):
   m = await slime.respond("Downloaded, Now uploading....")
   f = open(dl, 'rb')
   async with rimuru.action(slime.chat_id, 'audio'):
-    await rimuru.send_message(slime.chat_id, file=f, force_document=False)
+    await rimuru.send_message(slime.chat_id, file=f, attribute=DocumentAttributeAudio, force_document=False)
   await m.delete()
   os.remove(dl)
