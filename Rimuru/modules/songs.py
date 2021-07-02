@@ -30,7 +30,7 @@ async def songs(slime):
   with youtube_dl.YoutubeDL(opts) as ydl:
     info = ydl.extract_info(url, download=False)
     dl = ydl.prepare_filename(info)
-    ydl.procces_info(info)
+    ydl.download([url])
   m = await slime.respond("Downloaded, Now uploading....")
   f = open(dl, 'rb')
   async with rimuru.action(slime.chat_id, 'audio'):
