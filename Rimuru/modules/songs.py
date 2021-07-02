@@ -20,5 +20,5 @@ async def songs(slime):
   file_name = path + ".mp3"
   dl = os.rename(dl, file_name)
   async with rimuru.action(slime.chat_id, 'audio'):
-    await rimuru.send_file(slime.chat_id, file=open(file_name, 'rb'), force_document=False)
+    await rimuru.send_message(slime.chat_id, file=open(file_name, 'rb'), force_document=False)
   os.remove(file_name)
