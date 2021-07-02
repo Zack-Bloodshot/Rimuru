@@ -11,7 +11,7 @@ LOGS = logging.getLogger(__name__)
 @rimuru.on(events.NewMessage(outgoing=True,pattern=r'^!s(.*)'))
 async def songs(slime):
   opts = {
-    "outtmpl": "%(title)s.%(ext)s",
+    "outtmpl": "%(title)s.%mp3",
     "logger": LOGS,
     "writethumbnail": True,
     "format": "bestaudio/best",
