@@ -33,7 +33,7 @@ async def songs(slime):
     ydl.download([url])
   m = await slime.respond("Downloaded, Now uploading....")
   f = open(dl, 'rb')
-  upload = await slime.client.fast_upload_file(file=f)
+  upload = await slime.client.upload_file(file=f)
   media = types.InputMediaUploadedDocument(
     file=upload,
     attribute=types.DocumentAttributeAudio,
