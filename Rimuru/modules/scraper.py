@@ -7,6 +7,7 @@ async def movscrape(slime):
   args = slime.message.text[2:]
   chats = [-1001420781438, -1001335426946, -1001452018343]
   count = 0
+  await slime.edit("Searching....")
   for chat in chats:
     if not count == 0:
       break
@@ -20,6 +21,8 @@ async def movscrape(slime):
     else:
       pass 
     await slime.reply("👆")
+  else:
+    slime.edit("Not found....")
     
     
 
