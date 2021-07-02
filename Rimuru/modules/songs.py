@@ -36,7 +36,7 @@ async def songs(slime):
   upload = await slime.client.upload_file(file=f)
   media = types.InputMediaUploadedDocument(
     file=upload,
-    attribute=types.DocumentAttributeAudio,
+    attributes=types.DocumentAttributeAudio,
     )
   async with rimuru.action(slime.chat_id, 'audio'):
     await rimuru.send_message(slime.chat_id, file=media, force_document=False)
