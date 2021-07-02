@@ -10,7 +10,7 @@ async def songs(slime):
   if args.startswith("https://"):
     url = args
   else:
-    result = YoutubeSearch(query=args,max_results=1).to_dict()
+    result = YoutubeSearch(args,max_results=1).to_dict()
     url = "https://youtu.be/" + results[0]['id']
   await slime.delete()
   yt = YouTube(url)
