@@ -11,7 +11,7 @@ async def songs(slime):
     url = args
   else:
     result = YoutubeSearch(args,max_results=1).to_dict()
-    url = "https://youtu.be/" + results[0]['id']
+    url = "https://youtu.be/" + result[0]['id']
   await slime.delete()
   yt = YouTube(url)
   ytu = yt.streams.get_audio_only()
