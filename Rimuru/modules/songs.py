@@ -33,8 +33,9 @@ async def songs(slime):
     ydl.download([url])
   m = await slime.respond("Downloaded, Now uploading....")
   f = open(dl, 'rb')
-  media = types.InputMediaDocument(
-    file=f,
+  upload = await slime.client.fast_upload_file(file=f)
+  media = types.InputMediaUploadedDocument(
+    file=upload,
     attribute=types.DocumentAttributeAudio,
     )
   async with rimuru.action(slime.chat_id, 'audio'):
