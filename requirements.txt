@@ -4,3 +4,6 @@ psycopg2-binary
 pytube
 youtube_search
 youtube_dl
+hachoir
+ffmpeg 
+ffprove
