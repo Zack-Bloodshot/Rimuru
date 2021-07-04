@@ -42,7 +42,7 @@ async def pmperm(slime):
     await slime.reply(f"Yo {user.first_name}! Please wait till Abhi come's and approves you...")
 
 
-@rimuru.on(events.NewMessage(outgoing=True, pattern=r"^#(a|approve)"))    
+@rimuru.on(events.NewMessage(outgoing=True, pattern=r"^#(a|approve)($)"))    
 async def approve(slime):
   if not slime.is_private:
     return 
@@ -58,7 +58,7 @@ async def approve(slime):
   time.sleep(1)
   await slime.delete()
 
-@rimuru.on(events.NewMessage(outgoing=True, pattern=r"^#(d|disapprove)"))    
+@rimuru.on(events.NewMessage(outgoing=True, pattern=r"^#(d|disapprove)($)"))    
 async def approve(slime):
   if not slime.is_private:
     return 
