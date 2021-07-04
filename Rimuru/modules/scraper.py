@@ -20,9 +20,10 @@ async def movscrape(slime):
       slime = await slime.get_reply_message()
     else:
       pass 
-    await slime.reply("👆")
+    await slime.reply("👆") 
+    await slime.delete()
   else:
-    slime.edit("Not found....")
+    await slime.edit("Not found....")
     
     
 
