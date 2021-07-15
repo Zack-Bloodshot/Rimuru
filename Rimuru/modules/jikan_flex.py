@@ -56,7 +56,7 @@ async def flexer(slime):
       buttons=[
         Button.url(
           text='Profile',
-          url=get[3] 
+          url=get[2],
           )
         ]
       )
