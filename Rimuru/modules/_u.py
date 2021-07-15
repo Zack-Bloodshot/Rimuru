@@ -44,7 +44,7 @@ async def helpcall(slime):
   await slime.answer(help_strings, alert=True)
   
   
-@rimuru.on(events.NewMessage(outgoin=True,pattern=r'^#help$'))  
+@rimuru.on(events.NewMessage(outgoing=True,pattern=r'^#help$'))  
 async def helpp(slime):
   great_sage = rafael.me.username
   results = await ultroid_bot.inline_query(great_sage, "help") 
