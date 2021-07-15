@@ -9,7 +9,7 @@ bot_token = os.environ.get('BOT_TOKEN')
 pm_log = int(os.environ.get('PM_LOG'))
 tag_log = int(os.environ.get('TAG_LOG'))
 db_uri = os.environ.get('DATABASE_URL')
-alive_pic = os.enviorn.get('ALIVE_PIC') 
+alive_pic = os.environ.get('ALIVE_PIC') 
 
 help_strings = """
 `#alive` - Alive?
