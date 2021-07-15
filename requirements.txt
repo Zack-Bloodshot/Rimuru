@@ -7,3 +7,4 @@ youtube_dl
 hachoir
 ffmpeg 
 ffprobe
+jikanpy

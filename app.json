@@ -1,0 +1,45 @@
+{
+  "name": "Rimuru",
+  "description": "A simple low plugin userbot!",
+  "keywords": ["userbot", "telegram"]
+  "repository": "https://github.com/Zack-Bloodshot/Rimuru"
+  "addons": [
+      {
+         "options": {
+            "version": "12"
+         },
+         "plan": "heroku-postgresql"
+      }
+  ],
+  "env":{
+    "API_ID": {
+      "description": "Your api id",
+      "required": true
+    },
+    "API_HASH":{
+      "description": "Your api hash", 
+      "required": true 
+    },
+    "STRING_SESSION":{
+      "description": "Your telethon session",
+      "required": true
+    },
+    "BOT_TOKEN":{
+      "description": "Your bot token after creating a bot with @BotFather",
+      "required": true 
+    },
+    "PM_LOG":{
+      "description": "Your pm logging group's id, whenever someone pm's you the bot will send it here",
+      "required": true
+    },
+    "TAG_LOG":{
+      "description": "Your tags logging group's id, whenever someone tah you or reply to your messages, it will be sent here",
+      "required": true
+    },
+    "ALIVE_PIC":{
+      "description": "Your alive pic, leaving it empty will result in a rimuru pic",
+      "required": false,
+      "value": "https://telegra.ph/file/99d6aa1b5253a25565275.jpg",
+    }
+  }
+}
