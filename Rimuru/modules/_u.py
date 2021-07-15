@@ -39,7 +39,7 @@ async def helppp(slime):
   ]
   await slime.answer(h)
 
-@rafael.on(events.CallBackQuery(pattern=b'help'))
+@rafael.on(events.CallbackQuery(pattern=b'help'))
 async def helpcall(slime):
   await slime.answer(help_strings, alert=True)
   
