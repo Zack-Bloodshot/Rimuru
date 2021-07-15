@@ -51,8 +51,7 @@ async def flexer(slime):
   hek = [
     slime.builder.article(
       title = f'{get[0]} stats',
-      description=f'Anime Stats and manga stats....',
-      thumb=get[2],
+      description='Anime Stats and manga stats....',
       text=text,
       buttons=[
         Button.url(
