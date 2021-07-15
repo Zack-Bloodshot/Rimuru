@@ -1,7 +1,7 @@
 from jikanpy import Jikan
 import jikanpy.exceptions
 from Rimuru import rimuru, rafael
-from telethon import events, Buttons 
+from telethon import events, Button
 
 class flex_jikan:
   def __init__(self, username):
