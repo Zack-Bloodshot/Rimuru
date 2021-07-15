@@ -47,16 +47,17 @@ async def flexer(slime):
   if get == False:
     await slime.answer([], switch_pm='User not found....', switch_pm_param='start')
     return
-  text = f'**[{get[0]}({get[2]})**\n**Anime Statistics:**\nDays Watched: {get[3]})\nMean Score: {get[4]}\nWatching: {get[5]}\nCompleted: {get[6]}\nTotal Entries: {get[7]}\nEpisodes watched: {get[8]}\n\n**Mangas Stats:**\nDays Read: {get[9]}\nMean Score: {get[10]}\nReading : {get[11]}\nCompleted: {get[12]}\nTotal Entries: {get[13]}\nChapters Read {get[14]}\n'
+  text = f'**{get[0]}[­]({get[2]})**\n\n**Anime Statistics:**\n\tDays Watched: {get[3]}\n\tMean Score: {get[4]}\n\yWatching: {get[5]}\n\tCompleted: {get[6]}\n\tTotal Entries: {get[7]}\n\tEpisodes watched: {get[8]}\n\n**Mangas Stats:**\n\tDays Read: {get[9]}\n\tMean Score: {get[10]}\n\tReading : {get[11]}\n\tCompleted: {get[12]}\n\tTotal Entries: {get[13]}\n\tChapters Read {get[14]}\n'
   hek = [
     slime.builder.article(
       title = f'{get[0]} stats',
-      description=f'{text[:20]}....',
+      description=f'Anime Stats and manga stats....',
+      thumb=get[2],
       text=text,
       buttons=[
         Button.url(
           text='Profile',
-          url=get[2],
+          url=get[1],
           )
         ]
       )
