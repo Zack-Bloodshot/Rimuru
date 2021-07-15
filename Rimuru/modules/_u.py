@@ -38,6 +38,11 @@ async def helppp(slime):
   )
   ]
   await slime.answer(h)
+
+@rafael.on(events.CallBackQuery(pattern=b'help'))
+async def helpcall(slime):
+  await slime.answer(help_strings, alert=True)
+  
   
 @rimuru.on(events.NewMessage(outgoin=True,pattern=r'^#help$'))  
 async def helpp(slime):
