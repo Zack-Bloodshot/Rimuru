@@ -39,7 +39,15 @@
     "ALIVE_PIC":{
       "description": "Your alive pic, leaving it empty will result in a rimuru pic",
       "required": false,
-      "value": "https://telegra.ph/file/99d6aa1b5253a25565275.jpg",
+      "value": "https://telegra.ph/file/99d6aa1b5253a25565275.jpg"
     }
+    
+  },
+  "buildpacks": [{"url": "heroku/python"}],
+  "formation": {
+  	"worker": {
+  		"quantity": 1,
+      "size": "free"
+  	}
   }
 }
