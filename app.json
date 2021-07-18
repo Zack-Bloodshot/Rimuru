@@ -1,8 +1,8 @@
 {
   "name": "Rimuru",
   "description": "A simple low plugin userbot!",
-  "keywords": ["userbot", "telegram"]
-  "repository": "https://github.com/Zack-Bloodshot/Rimuru"
+  "keywords": ["userbot", "telegram"],
+  "repository": "https://github.com/Zack-Bloodshot/Rimuru",
   "addons": [
       {
          "options": {
