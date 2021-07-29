@@ -62,12 +62,12 @@ async def btn_maker(slime):
       [
         slime.builder.article(
           title='Build Button',
-          description='Make buttons Like, Text To send, Button1:url Button2:url',
-          text= 'Make buttons Like, Text To send, Button1:url Button2:url',
+          description='Make buttons Like, Text To send Button1:url Button2:url',
+          text= 'Make buttons Like, Text To send Button1:url Button2:url',
           )
         ]
       )
-  hek = the_btn.split(',')
+  hek = the_btn.split(' ')
   main_text = hek[0]
   hek.pop(0)
   btns = []
