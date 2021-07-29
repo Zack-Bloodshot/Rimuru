@@ -75,7 +75,7 @@ async def btn_maker(slime):
     btn = i.split(':', 1)
     btn_text = btn[0]
     btn_url = btn[1]
-    btns.append([Button.url(text=btn_text), url=btn_url])
+    btns.append([Button.url(text=btn_text, url=btn_url)])
   article = [
     slime.builder.article(
       title=f'{main_text[:-10]}...',
