@@ -67,9 +67,9 @@ async def btn_maker(slime):
           )
         ]
       )
-  hek = the_btn.split(' ')
+  hek = the_btn.split(',')
   main_text = hek[0]
-  hek.pop(0)
+  hek = hek[1].split(' ')
   btns = []
   for i in hek:
     btn = i.split(':', 1)
