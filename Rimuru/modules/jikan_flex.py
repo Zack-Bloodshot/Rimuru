@@ -41,7 +41,7 @@ async def flexer(slime):
   if slime.text == '':
     await slime.answer([], switch_pm='Search any MAL user.....', switch_pm_param='start')
     return 
-  elif slime.text in ignore:
+  elif slime.text.starswith('help' or 'btn'):
     return
   user = slime.text 
   get = flex_jikan.flex(user)
