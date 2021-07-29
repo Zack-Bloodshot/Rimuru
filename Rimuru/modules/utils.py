@@ -56,7 +56,7 @@ async def idscrape(slime):
 @rafael.on(events.InlineQuery(pattern=r'^btn(.*)')) 
 async def btn_maker(slime):
   try:
-    the_btn = slime.split(' ', 1)[1]
+    the_btn = slime.text.split(' ', 1)[1]
   except IndexError:
     await slime.answer(
       [
