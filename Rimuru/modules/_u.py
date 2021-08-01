@@ -18,7 +18,7 @@ async def ping(slime):
   pon = (start - end).microseconds / 1000
   await slime.edit(f"ᑭOᑎᘜ!!\n\npong time: {pon}ms")
 
-@rafael.on(events.NewMessage(outgoing=True,pattern=r'^\/start'))
+@rafael.on(events.NewMessage(incoming=True,pattern=r'^\/start'))
 async def start(slime):
   if slime.message.text != 'start':
     query = slime.message.text.split(' ', 1)[1]
