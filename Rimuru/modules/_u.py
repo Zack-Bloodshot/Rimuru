@@ -60,5 +60,5 @@ async def helpcall(slime):
 async def helpp(slime):
   bot = await rafael.get_me()
   great_sage = bot.username
-  results = await ultroid_bot.inline_query(great_sage, "help") 
-  await results[0].click(slime.chat_id, reply_to=ult.reply_to_msg_id, hide_via=True) 
+  results = await rimuru.inline_query(great_sage, "help") 
+  await results[0].click(slime.chat_id, reply_to=slime.reply_to_msg_id, hide_via=True) 
