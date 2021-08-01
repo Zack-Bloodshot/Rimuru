@@ -25,14 +25,16 @@ async def start(slime):
 @rafael.on(events.InlineQuery(pattern=r'help'))
 async def helppp(slime):
   builder = slime.builder 
+  bot = await rafael.get_me()
+  rafael_name = bot.username
   h = [
     builder.article(
     title='Help',
     text='Press button, to see help',
     buttons=[
-      Button.inline(
+      Button.url(
         text='Help',
-        data='help'
+        url=f'https://t.me/{rafael_name},
         )
       ]
   )
@@ -46,6 +48,7 @@ async def helpcall(slime):
   
 @rimuru.on(events.NewMessage(outgoing=True,pattern=r'^#help$'))  
 async def helpp(slime):
-  great_sage = rafael.me.username
+  bot = await rafael.get_me()
+  great_sage = bot.username
   results = await ultroid_bot.inline_query(great_sage, "help") 
   await results[0].click(slime.chat_id, reply_to=ult.reply_to_msg_id, hide_via=True) 
