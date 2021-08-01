@@ -55,8 +55,6 @@ async def helppp(slime):
 @rafael.on(events.CallbackQuery(pattern=b'help'))
 async def helpcall(slime):
   await slime.answer(help_strings, alert=True)
-
-@rafael.on()  
   
 @rimuru.on(events.NewMessage(outgoing=True,pattern=r'^#help$'))  
 async def helpp(slime):
