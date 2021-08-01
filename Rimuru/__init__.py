@@ -13,10 +13,15 @@ alive_pic = os.environ.get('ALIVE_PIC')
 
 help_strings = """
 `#alive` - Alive?
+
 `#ping` - Pong! kek!
+
 `#a`|`#da`|`#approve`|`#disapprove` - Good ol' pmpermit..., the bot only starts replying on the 5th message and then blocks on the 7th message.
+
 `#s` - scrape movies from three channels kek!
-`!s` - Youtube audio downloader, not the best quality tho 
+
+`!s` - Youtube audio downloader, not the best quality tho
+
 `#id` - reply to anything to id! 
 """
 

@@ -20,7 +20,7 @@ async def ping(slime):
 
 @rafael.on(events.NewMessage(incoming=True,pattern=r'^\/start'))
 async def start(slime):
-  if slime.message.text != 'start':
+  if slime.message.text != '/start':
     query = slime.message.text.split(' ', 1)[1]
     if query == 'help':
       await slime.reply(help_strings)
