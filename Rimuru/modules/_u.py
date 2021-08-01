@@ -45,7 +45,7 @@ async def helppp(slime):
     buttons=[
       Button.url(
         text='Help',
-        url=f'https://t.me/{rafael_name}?start=help,
+        url=f'https://t.me/{rafael_name}?start=help',
         )
       ]
   )
